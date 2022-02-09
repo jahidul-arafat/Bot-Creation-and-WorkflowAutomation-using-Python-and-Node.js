@@ -8,7 +8,7 @@ __maintainer__ = "Jahidul Arafat"
 __email__ = "jahidularafat@yahoo.com"
 __status__ = "Production"
 
-import os
+import os, sys
 import argparse
 
 # Pre-requisite
@@ -47,6 +47,11 @@ Test the argument parser
 > python3 directory_clean_error.py -h
 > python3 directory_clean_error.py --path ./test_directory
 '''
+
+# A first layer confirmation to make sure you accidentally dont clear any directory
+user_response = input("Do you want to continue (Y/N)").lower()
+if user_response == "n":
+    sys.exit(0)
 
 # Step-1: Get all files from the given directory
 dir_content = os.listdir(path)                                                                # this will return a list of all files and folders in the directory i.e. [image1.png, ...]
