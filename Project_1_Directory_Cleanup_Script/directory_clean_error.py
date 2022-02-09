@@ -1,10 +1,20 @@
+"""directory_clean_error.py: Description of what Directory Cleaning Script does."""
+
+__author__      = "Jahidul Arafat"
+__copyright__   = "Copyright 2022, JAROTBALL"
+__license__ = "GPL"
+__version__ = "1.0.1"
+__maintainer__ = "Jahidul Arafat"
+__email__ = "jahidularafat@yahoo.com"
+__status__ = "Production"
+
 import os
 import argparse
 
 # Pre-requisite
-# prepare the test_directory. Run the test_directory.sh bash script using
-# chmod +x test_directory.sh
-# ./test_directory.sh
+# prepare the test_directory. Run the test_directory_script.sh bash script using
+# chmod +x test_directory_script.sh
+# ./test_directory_script.sh
 
 
 # Step-0: Setting the argument parser
@@ -57,7 +67,7 @@ for doc in docs:
     doc_name = os.path.basename(full_doc_path)                                                # os.path.basename("./test/xyz") -> xyz
 
     # 2.5 try to handle the hidden file exists, else it will raise an error
-    if doc_name == "directory_clean_error" or doc_name.startswith("."):
+    if doc_name == "directory_clean_error" or doc_name == "test_directory_script" or doc_name.startswith("."):
         print(f"--> [{doc_name}] is either a current script or hidden file. Escaping...")
         continue
 
