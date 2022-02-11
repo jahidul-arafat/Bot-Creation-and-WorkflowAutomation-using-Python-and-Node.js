@@ -22,8 +22,8 @@ args = parser.parse_args()
 # print(args)
 
 # godaddy API credentials for authorization
-api_key = "3mM44UbhM5a12M_DnNQa9FMJCL5Uu2AgNCthd"
-api_secret = "A8D9xQSoWscVoj2oeifCR4"
+api_key = "putyourownapikey"
+api_secret = "putyourownapisecret"
 req_headers = {
     "Authorization": f"sso-key {api_key}:{api_secret}",
     "accept": "application/json"

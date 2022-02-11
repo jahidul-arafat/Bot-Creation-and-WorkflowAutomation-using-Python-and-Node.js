@@ -6,6 +6,7 @@ bin-release/
 
 # Other files and folders
 .settings/
+./Project_3_API_automation/godaddy_api_info.txt
 
 # Executables
 *.swf
